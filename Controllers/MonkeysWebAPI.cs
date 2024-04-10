@@ -15,20 +15,20 @@ namespace CalculatorWebAPI.Controllers
         public IActionResult GetAllMonbkeys()
         {
             MonkeyListDto list = new MonkeyListDto();
-            list.Monkeys = new List<MonkeyDto>();
+            //list.Monkeys = new List<MonkeyDto>();
 
-            MonkeyList monkeys = new MonkeyList();
+            //MonkeyList monkeys = new MonkeyList();
 
-            foreach (Monkey m in monkeys.Monkeys)
-            {
-                list.Monkeys.Add(new MonkeyDto()
-                {
-                    Name = m.Name,
-                    ImageUrl = m.ImageUrl,
-                    Location = m.Location,
-                    Details = m.Details
-                });
-            }
+            //foreach (Monkey m in monkeys.Monkeys)
+            //{
+            //    list.Monkeys.Add(new MonkeyDto()
+            //    {
+            //        Name = m.Name,
+            //        ImageUrl = m.ImageUrl,
+            //        Location = m.Location,
+            //        Details = m.Details
+            //    });
+            //}
             return Ok(list);
         }
         [HttpGet("ReadMonkeys")]
